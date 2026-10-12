@@ -62,3 +62,27 @@ foreach(int wartosc in uzbiorWylosowanych)
     Console.Write(wartosc+" == ");
 }
 
+HashSet<int> zbior2 = new HashSet<int>();
+for(int i = 0; i < 30; i++)
+{
+    zbior2.Add(wylosowane[i]);
+}
+Console.WriteLine();
+foreach (int wartosc in zbior2)
+{
+    Console.WriteLine(wartosc + " wystąpiła " + policz(wartosc, wylosowane) + " razy");
+}
+
+int policz(int wartosc, List<int> lista)
+{
+    int ile = 0;
+    for(int i = 0; i < lista.Count; i++)
+    {
+        if (lista[i] == wartosc)
+        {
+            ile++;
+        }
+    }
+    return ile;
+}
+
