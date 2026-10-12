@@ -46,5 +46,19 @@ else
 {
     Console.WriteLine("Dolna liczba" + dolnaLiczba);
 }
-
+Console.WriteLine();
+Random random = new Random();
+List<int> wylosowane = new List<int>();
+for (int i = 0; i < 30; i++){
+    wylosowane.Add(random.Next(50, 101));
+}
+for(int i = 0; i < 30; i++)
+{
+    Console.WriteLine( wylosowane[i]+ "**");
+}
+HashSet<int> uzbiorWylosowanych = new HashSet<int>(wylosowane);
+foreach(int wartosc in uzbiorWylosowanych)
+{
+    Console.Write(wartosc+" == ");
+}
 
